@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@vite-pwa/nuxt'],
+  pages: true,                        // /pages, /layouts ディレクトリを使用するようにする
   pwa: {
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico"],
