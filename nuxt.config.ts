@@ -3,6 +3,10 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@vite-pwa/nuxt'],
   pages: true,                        // /pages, /layouts ディレクトリを使用するようにする
+  css: [                              // UI framework 用の CSS の参照パス
+    'quasar/dist/quasar.prod.css'
+  ],
+  ssr: false,
   pwa: {
     registerType: "autoUpdate",
     includeAssets: ["favicon.ico"],

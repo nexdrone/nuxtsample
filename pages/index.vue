@@ -50,12 +50,16 @@
           </ClientOnly>
         </div>
     </div>
+    <q-btn :label="samplelabel" />
+    <q-input filled v-model="sampleText" />
     <GoogleMap api-key="AIzaSyAvMUnjd1JxPZbshFoGjT1ue6geFnrkzhE" style="width: 100%; height: 500px" :center="latlng" :zoom="15">
     <Marker :options="{ position: latlng }" />
     </GoogleMap>
   </template>
   
-  <script setup>
-  import { GoogleMap, Marker } from "vue3-google-map";
-  const { latlng, reset, exe } = geoLocation();
+  <script setup lang="ts">
+    import { GoogleMap, Marker } from "vue3-google-map";
+    const { latlng, reset, exe } = geoLocation();
+    const samplelabel = "nuxt3";
+    const sampleText= ref<string>("hello nuxt3");
   </script>
